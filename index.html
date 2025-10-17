@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agarly - Rent Anything Easily</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <!-- حطي اللوجو هنا -->
+      <img src="photo_2025-10-17_21-13-42.jpg" alt="Agarly Logo">
+      <h1>Agarly</h1>
+    </div>
+    <button id="loginBtn">Login</button>
+  </header>
+
+  <!-- Main Section -->
+  <main id="mainContent">
+    <h2>Welcome to Agarly</h2>
+    <p>Rent or lend anything you need, anytime, anywhere!</p>
+  </main>
+
+  <!-- Role Selection -->
+  <section id="roleSection" class="hidden">
+    <h2>Choose Your Role</h2>
+    <button id="lenderBtn">I’m a Lender</button>
+    <button id="renterBtn">I’m a Renter</button>
+  </section>
+
+  <!-- Lender Section -->
+  <section id="lenderSection" class="hidden">
+    <h2>What would you like to rent out?</h2>
+    <select id="lenderCategory">
+      <option value="">Select Category</option>
+      <option>Car</option>
+      <option>Bike</option>
+      <option>Laptop</option>
+      <option>Device</option>
+      <option>Clothes</option>
+      <option>Other</option>
+    </select>
+    <button onclick="showForm()">Next</button>
+  </section>
+
+  <!-- Renter Section -->
+  <section id="renterSection" class="hidden">
+    <h2>What are you looking to rent?</h2>
+    <select id="renterCategory">
+      <option value="">Select Category</option>
+      <option>Car</option>
+      <option>Bike</option>
+      <option>Laptop</option>
+      <option>Device</option>
+      <option>Clothes</option>
+      <option>Other</option>
+    </select>
+    <button onclick="showForm()">Next</button>
+  </section>
+
+  <!-- Form Section -->
+  <section id="formSection" class="hidden">
+    <h2>Rental Details</h2>
+    <form id="rentalForm">
+      <label>Full Name:</label>
+      <input type="text" required>
+
+      <label>National ID:</label>
+      <input type="text" required>
+
+      <label>Phone Number:</label>
+      <input type="text" required>
+
+      <label>Deposit (10% upfront):</label>
+      <input type="number" required placeholder="Enter amount">
+
+      <label>Address:</label>
+      <input type="text" required>
+
+      <button type="button" id="agreementBtn">View Agreement</button>
+    </form>
+  </section>
+
+  <!-- Agreement Section -->
+  <section id="agreementSection" class="hidden">
+    <h2>Rental Agreement</h2>
+    <p>
+      I hereby acknowledge that I am renting the selected item from Agarly.
+      I understand that if any damage, loss, or issue occurs during my rental period,
+      I am fully responsible for paying the total cost of the item.
+    </p>
+    <p>I agree to these terms and will sign and print this agreement before receiving the item.</p>
+    <button onclick="window.print()">Print & Sign Agreement</button>
+    <br><br>
+    <button id="feedbackBtn">Continue to Feedback</button>
+  </section>
+
+  <!-- Feedback Section -->
+  <section id="feedbackSection" class="hidden">
+    <h2>We value your feedback 💬</h2>
+    <p>Please share your experience or suggestions for improvement:</p>
+    <textarea id="feedbackInput" placeholder="Write your feedback here..."></textarea>
+    <button id="submitFeedback">Submit Feedback</button>
+    <p id="thankMsg" class="hidden">Thank you for your feedback! 💜</p>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
